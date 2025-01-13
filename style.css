@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 910px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Montserrat", serif;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  color: hsl(212, 21%, 14%);
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.main-component {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 500px;
+  height: 380px;
+  border-radius: 10px;
+}
+
+.main-img img {
+  max-inline-size: 100%;
+  block-size: auto;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.main-content {
+  text-align: left;
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 100%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.perfume-text {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 10px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.new-price {
+  color: hsl(158, 36%, 37%);
+}
+
+.old-price {
+  text-decoration: line-through;
+  margin-left: 15px;
+}
+
+button {
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:active,
+button:hover {
+  background-color: hsl(212, 21%, 14%);
+  cursor: pointer;
+}
+
+button > p {
+  color: hsl(0, 0%, 100%);
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  body {
+    height: auto;
+
+    padding: 30px 15px;
+  }
+  .main-component {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+  .main-img {
+    height: 245px;
+
+    background-image: url(./images/image-product-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+  }
+  .main-img img {
+    display: none;
+  }
+  .main-content {
+    height: 350px;
+    padding: 30px;
+  }
+}
